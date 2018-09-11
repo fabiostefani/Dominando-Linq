@@ -1,6 +1,7 @@
 ﻿using fabiostefani.io.DominandoLinq.Loja.Dominio;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace fabiostefani.io.DominandoLinq.Loja
@@ -9,18 +10,38 @@ namespace fabiostefani.io.DominandoLinq.Loja
     {
         static void Main(string[] args)
         {
-            //var produtos = new Produto().Listar();
-            //produtos.Where(x=>x.Nome.Contains("x"))
-            //        .ToList()
-            //        .ForEach(x => EscreverNaTela(x));
+            var produto = new Produto();
+            var frutas = produto.ListarFrutas();
+            var eletronicos = produto.ListarEletronicos();
+
+            var produtos = new List<Produto>();
+            produtos.AddRange(frutas);
+            produtos.AddRange(eletronicos);
+            produtos.ForEach(x => EscreverNaTela(x));
+            Console.WriteLine("------------------------------------");
+            var agrupCategoria = (from p in produtos                                  
+                                  group p by p.Categoria into agrup                                  
+                                  orderby agrup.Key
+                                  select new
+                                  {
+                                      Categoria = agrup.Key,
+                                      ValorMax = agrup.Max(x => x.Valor),
+                                      ValorMin = agrup.Min(x=>x.Valor),
+                                      ValorTotal = agrup.Sum(x=>x.Qtde * x.Valor)
+                                  }).ToList();
+
+            agrupCategoria.ForEach(x =>
+            {
+                Console.WriteLine(JsonConvert.SerializeObject(x));
+            });
 
             //Console.WriteLine("VALOR MAIOR QUE 4");
             //produtos.Where(x => x.Valor > 4)
             //        .ToList()
             //        .ForEach(x => EscreverNaTelajJson(x));
 
-            Intersect();
-            Except();
+            //Intersect();
+            //Except();
 
             Console.ReadLine();
         }
