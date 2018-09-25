@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fabiostefani.io.DominandoLi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exemplo com Classe", "Exemplo com Classe", "{28E7614C-D29F-423F-A41A-A76B68D2C7D8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exemplo com Banco Dados", "Exemplo com Banco Dados", "{A1F88A52-3DA1-4D97-9E0F-F5F85F10E785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fabiostefani.io.DominandoLinq.BancoDados", "fabiostefani.io.DominandoLinq.BancoDados\fabiostefani.io.DominandoLinq.BancoDados.csproj", "{7D4C778F-033F-455D-A08E-4188A022CF8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,10 @@ Global
 		{EE834084-6955-487B-8447-068F9CB892F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE834084-6955-487B-8447-068F9CB892F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE834084-6955-487B-8447-068F9CB892F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D4C778F-033F-455D-A08E-4188A022CF8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D4C778F-033F-455D-A08E-4188A022CF8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D4C778F-033F-455D-A08E-4188A022CF8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D4C778F-033F-455D-A08E-4188A022CF8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4CF8F461-8584-4BA1-BEB1-0B3737FD7404} = {28E7614C-D29F-423F-A41A-A76B68D2C7D8}
 		{EE834084-6955-487B-8447-068F9CB892F8} = {28E7614C-D29F-423F-A41A-A76B68D2C7D8}
+		{7D4C778F-033F-455D-A08E-4188A022CF8A} = {A1F88A52-3DA1-4D97-9E0F-F5F85F10E785}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF0C1BEB-155A-4497-AF47-6FDCB880E326}
